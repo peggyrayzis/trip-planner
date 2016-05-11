@@ -17,13 +17,13 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+
+
 // statically serve front-end dependencies
 
-/* 
+ 
  app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist'));
   app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist'));
-*/
-
 
 // serve any other static files
 app.use(express.static(__dirname + '/public'));
