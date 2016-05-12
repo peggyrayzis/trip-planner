@@ -1,4 +1,4 @@
-
+{%extends 'layout.html' %}
 {%block content %}
 	<label for ="hotel">Hotels </label>
 	<select name="hotel">
@@ -20,4 +20,58 @@
 		<option value="{{activity.name}}">{{activity.name}}</option> 
 		{%endfor%}
 	</select>
+	<!-- some fun with overlays -->
+	<div class="triggers">
+	<button type="button" class="daysselect btn btn-default btn-sm" rel="#daysselect"><span class="glyphicon glyphicon-calendar"></span></button>
+
+	<button type="button" class="mapselect btn btn-default btn-sm" rel="#mapselect"><span class="glyphicon glyphicon-map-marker"></span></button>
+
+	<button type="button" class="restaurantselect btn btn-default btn-sm" rel="#restaurantselect"><span class="glyphicon glyphicon-cutlery"></span></button>
+
+	<button type="button" class="hotelselect btn btn-default btn-sm" rel="#hotelselect"><span class="glyphicon glyphicon-home"></span></button>
+
+	<button type="button" class="activityselect btn btn-default btn-sm" rel="#activityselect"><span class="glyphicon glyphicon-camera"></span></button>
+	</div>
+
+	<!-- id attribute must match rel tag -->
+	<div class="days_overlay col-md-7" id="daysselect">
+	<button type="button" class="close btn btn-round btn-sm"><span class="glyphicon glyphicon-remove"></span></button>
+	<img src="http://www.maxiaids.com/Media/Thumbs/0014/0014871-giant-appointment-calendar-2016-200.jpg"/>
+	<div class="daysinfo">
+	<h4>Choose Your Days</h4>
+	</div>
+	</div>
+
+	<div class="maps_overlay col-md-4" id="mapselect">
+	<button type="button" class="close btn btn-round btn-sm"><span class="glyphicon glyphicon-remove"></span></button>
+	<img src="http://www.maxiaids.com/Media/Thumbs/0014/0014871-giant-appointment-calendar-2016-200.jpg"/>
+	<div class="mapsinfo">
+	<h4>Choose Your Maps</h4>
+	</div>
+	</div>
+
+	<div class="restaurant_overlay col-md-4" id="restaurantselect">
+	<button type="button" class="close btn btn-round btn-sm"><span class="glyphicon glyphicon-remove"></span></button>
+	<img src="http://www.maxiaids.com/Media/Thumbs/0014/0014871-giant-appointment-calendar-2016-200.jpg"/>
+	<div class="restaurantinfo">
+	<h4>Choose Your Restaurant</h4>
+	</div>
+	</div>
+
+	<div class="hotel_overlay col-md-4" id="hotelselect">
+	<button type="button" class="close btn btn-round btn-sm"><span class="glyphicon glyphicon-remove"></span></button>
+	<img src="http://www.maxiaids.com/Media/Thumbs/0014/0014871-giant-appointment-calendar-2016-200.jpg"/>
+	<div class="hotelinfo">
+	<h4>Choose Your Hotel</h4>
+	</div>
+	</div>
+
+	<div class="activity_overlay col-md-4" id="activityselect">
+	<button type="button" class="close btn btn-round btn-sm"><span class="glyphicon glyphicon-remove"></span></button>
+	<img src="http://www.maxiaids.com/Media/Thumbs/0014/0014871-giant-appointment-calendar-2016-200.jpg"/>
+	<div class="mapsinfo">
+	<h4>Choose Your Activity</h4>
+	</div>
+	</div>
+	
 	{%endblock%}
